@@ -1,0 +1,60 @@
+/**
+ * Author: Joshua Carter
+ * Created: 25/01/2018
+ */
+
+/* Colors */
+.white {
+	color: white;
+}
+.gray {
+	color: gray;
+}
+.green {
+	color: green;
+}
+.red {
+	color: red;
+}
+.teal {
+	color: rgb(0, 180, 180);
+}
+.faded {
+	opacity: 0.5;
+}
+
+/* Layout */
+.left {
+	float: left;
+}
+.right {
+	float: right;
+}
+.block {
+	display: block;
+}
+
+/* Font sizes */
+.font-xs {
+	font-size: 0.7em;
+}
+.font-sm {	
+	font-size: 0.8em;
+}
+.font-md {
+	font-size: 0.9em;
+}
+.font-lg {
+	font-size: 1.0em;
+}
+
+/* Shape */
+.round {
+	border-radius: 3px;
+}
+
+/* Custom */
+.quest-progress, .quest-progress p {
+	padding: 0;
+	margin-bottom: 3px;
+}

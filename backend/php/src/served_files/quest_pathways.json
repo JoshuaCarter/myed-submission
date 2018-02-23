@@ -1,0 +1,174 @@
+[
+    {
+        "user_id": 1,
+        "quest_paths": [
+            {
+                "order": 0,
+                "quest": {
+                    "id": 1,
+                    "name": "Curiosity - The Space Rover"
+                },
+                "mark": {
+                    "submitted": true,
+                    "completion": 100,
+                    "mark": 100
+                }
+            },
+            {
+                "order": 1,
+                "quest": {
+                    "id": 2,
+                    "name": "The 4 Hour Work Week",
+                    "is_active": false
+                },
+                "mark": {
+                    "submitted": true,
+                    "completion": 55,
+                    "mark": null
+                }
+            },
+            {
+                "order": 2,
+                "quest": {
+                    "id": 3,
+                    "name": "Let's Learn about Economics"
+                },
+                "mark": {
+                    "submitted": true,
+                    "completion": 27,
+                    "mark": 10
+                }
+            }
+        ]
+    },
+    {
+        "user_id": 2,
+        "quest_paths": [
+            {
+                "order": 0,
+                "quest": {
+                    "id": 2,
+                    "name": "The 4 Hour Work Week",
+                    "is_active": false
+                },
+                "mark": {
+                    "submitted": true,
+                    "completion": 75,
+                    "mark": null
+                }
+            },
+            {
+                "order": 1,
+                "quest": {
+                    "id": 3,
+                    "name": "Let's Learn about Economics"
+                },
+                "mark": {
+                    "submitted": false,
+                    "completion": 0,
+                    "mark": null
+                }
+            }
+        ]
+    },
+    {
+        "user_id": 3,
+        "quest_paths": [
+            {
+                "order": 0,
+                "quest": {
+                    "id": 1,
+                    "name": "Curiosity - The Space Rover"
+                },
+                "mark": {
+                    "submitted": true,
+                    "completion": 85,
+                    "mark": 15
+                }
+            },
+            {
+                "order": 1,
+                "quest": {
+                    "id": 3,
+                    "name": "Let's Learn about Economics"
+                },
+                "mark": {
+                    "submitted": false,
+                    "completion": 0,
+                    "mark": null
+                }
+            }
+        ]
+    },
+    {
+        "user_id": 4,
+        "quest_paths": [
+            {
+                "order": 0,
+                "quest": {
+                    "id": 1,
+                    "name": "Curiosity - The Space Rover"
+                },
+                "mark": {
+                    "submitted": true,
+                    "completion": 67,
+                    "mark": 80
+                }
+            },
+            {
+                "order": 1,
+                "quest": {
+                    "id": 3,
+                    "name": "Let's Learn about Economics"
+                },
+                "mark": {
+                    "submitted": false,
+                    "completion": 0,
+                    "mark": null
+                }
+            }
+        ]
+    },
+    {
+        "user_id": 5,
+        "quest_paths": [
+            {
+                "order": 0,
+                "quest": {
+                    "id": 1,
+                    "name": "Curiosity - The Space Rover"
+                },
+                "mark": {
+                    "submitted": true,
+                    "completion": 100,
+                    "mark": 100
+                }
+            },
+            {
+                "order": 1,
+                "quest": {
+                    "id": 2,
+                    "name": "The 4 Hour Work Week",
+                    "is_active": false
+                },
+                "mark": {
+                    "submitted": false,
+                    "completion": 0,
+                    "mark": null
+                }
+            },
+            {
+                "order": 2,
+                "quest": {
+                    "id": 3,
+                    "name": "Let's Learn about Economics"
+                },
+                "mark": {
+                    "submitted": true,
+                    "completion": 40,
+                    "mark": 65
+                }
+            }
+        ]
+    }
+]

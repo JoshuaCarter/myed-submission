@@ -1,0 +1,17 @@
+{
+	"name": "file_server",
+	"version": "1.0.0",
+	"description": "Serves files via docker",
+	"author": "joshua.carter.dev@gmail.com",
+	"license": "ISC",
+	"main": "app.js",
+	"scripts": {
+		"start": "node app.js"
+	},
+	"devDependencies": {
+		"express": "^4.16.1"
+	},
+	"dependencies": {
+		"cors": "^2.8.4"
+	}
+}

@@ -1,0 +1,126 @@
+<!--
+ - Author: Joshua Carter
+ - Created: 25/01/2018
+ - Edited: 22/02/2018
+-->
+<div class="container">
+	<!-- Page Header -->
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark round">
+		<!-- Title -->
+		<a class="navbar-brand" href="#">Quest Pathways</a>
+		<!-- Dropdown -->
+		<div class="btn-group ml-auto" dropdown>
+			<button class="btn btn-info dropdown-toggle" type="button" dropdownToggle>
+				{{servers_drop_label}}
+				<span class="caret"></span>
+			</button>
+			<!-- User Menu Items -->
+			<ul class="dropdown-menu dropdown-menu-right" role="menu" *dropdownMenu>
+				<li role="menuitem" *ngFor="let server of servers">
+					<button type="button" class="dropdown-item" (click)="onServerChange(server)">
+						{{server.name}}
+					</button>
+				</li>
+			</ul>
+		</div>
+		<!-- Dropdown -->
+		<div class="btn-group ml-2" dropdown>
+			<button class="btn btn-info dropdown-toggle" type="button" dropdownToggle>
+				{{users_drop_label}}
+				<span class="caret"></span>
+			</button>
+			<!-- User Menu Items -->
+			<ul class="dropdown-menu dropdown-menu-right" role="menu" *dropdownMenu>
+				<li role="menuitem">
+					<button type="button" class="dropdown-item" (click)="onUserAll()">
+						All Quests
+					</button>
+				</li>
+				<li class="divider dropdown-divider"></li>
+				<li role="menuitem" *ngFor="let user of users">
+					<button type="button" class="dropdown-item" (click)="onUserChange(user)">
+						{{user.fullname}}
+					</button>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<!-- Quest Paths -->
+	<div *ngFor="let path of selected_paths">
+		<!-- User Name -->
+		<div class="text-center pt-1">
+			<h5>{{path.name}}</h5>
+		</div>
+		<!-- Quest Cards -->
+		<div class="row">
+			<div class="col-md-6 col-xl-4 my-1" *ngFor="let p of path.quest_paths">
+				<div class="card">
+					<!-- Card Header -->
+					<div class="card-header px-3 py-1">
+						<!-- Order # -->
+						<span class="font-xs gray left">#{{p.order + 1}}</span>
+						<!-- Quest ID -->
+						<span class="font-xs gray right">quest id: {{p.quest.id}}</span>
+					</div>
+					<!-- container for fading inactive quests -->
+					<div [class.faded]="p.quest.is_active === false">
+						<!-- Card Body -->
+						<div class="card-body px-3 pt-1 pb-3">
+							<!-- Title Row -->
+							<div>
+								<!-- Name -->
+								<span class="card-title mt-2 mb-1 font-lg">{{p.quest.name}}</span>
+								<!-- Active/Inactive Label -->
+								<span class="green right font-sm" [hidden]="p.quest.is_active === false">
+									Active
+								</span>
+								<span class="red right font-sm" [hidden]="p.quest.is_active === undefined">
+									Inactive
+								</span>
+							</div>
+							<!-- Mark -->
+							<p class="mb-3 font-sm">Mark: {{getMarkStatus(p.mark.submitted, p.mark.mark)}}</p>
+							<!-- Progress Text -->
+							<div class="quest-progress">
+								<p class="card-text left font-md">Quest Progress:</p>
+								<!-- Submitted State -->
+								<p class="card-text right font-md">
+									Submitted:
+									<i class="fa fa-check green" aria-hidden="true" [hidden]="!p.mark.submitted"></i>
+									<i class="fa fa-times red" aria-hidden="true" [hidden]="p.mark.submitted"></i>
+								</p>
+							</div>
+							<!-- Progress Bar -->
+							<progressbar [value]="p.mark.completion" [striped]="true" [animate]="true">
+								{{p.mark.completion}}%
+							</progressbar>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Info Alert -->
+	<alert type="info" dismissible="true" [hidden]="infos.length == 0">
+		<h5>Did you know?</h5>
+		<!-- Infos -->
+		<p class="my-0" *ngFor="let msg of infos" [innerHTML]="msg"></p>
+	</alert>
+	<!-- Error Alert -->
+	<alert type="danger" dismissible="true" [hidden]="errors.length == 0">
+		<h5>Uh oh!</h5>
+		<!-- Errors -->
+		<p class="my-0" *ngFor="let err of errors" [innerHTML]="err"></p>
+	</alert>
+	<!-- Footer -->
+	<footer class="footer">
+		<div class="col-sm-12 round bg-dark text-light text-center font-md py-1 mt-2">
+			<span class="block">Joshua Carter</span>
+			<a class="teal" href="http://www.joshuacarter.com.au" target="_blank">website</a>
+			<span class="gray">|</span>
+			<a class="teal" href="https://github.com/JoshuaCarter" target="_blank">git</a>
+			<span class="gray">|</span>
+			<a class="teal" href="https://www.linkedin.com/in/joshua-carter-dev" target="_blank">linkedin</a>
+		</div>
+	</footer>
+</div>
